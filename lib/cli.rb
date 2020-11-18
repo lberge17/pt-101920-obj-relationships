@@ -1,4 +1,4 @@
-class CLI
+class ObjRelationshipLecture::CLI
     def run
         greeting
         menu
@@ -14,7 +14,7 @@ class CLI
         print "."
         sleep(0.5)
         puts
-        Product.create_all
+        ObjRelationshipLecture::Product.create_all
     end
 
     def menu
@@ -25,7 +25,7 @@ class CLI
     end
 
     def list_products
-        Product.all.each.with_index(1) do |product, i|
+        ObjRelationshipLecture::Product.all.each.with_index(1) do |product, i|
             puts "#{i}. #{product.name}".colorize(:green)
         end
     end
@@ -34,8 +34,8 @@ class CLI
         input = gets.chomp
         if input == "exit"
             good_bye
-        elsif input.to_i.between?(1, Product.all.size)
-            display_product(Product.all[input.to_i - 1])
+        elsif input.to_i.between?(1, ObjRelationshipLecture::Product.all.size)
+            display_product(ObjRelationshipLecture::Product.all[input.to_i - 1])
         else
             "invalid input, try again.".colorize(:orange)
             select_product

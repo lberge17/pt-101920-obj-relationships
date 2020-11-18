@@ -2,4 +2,4 @@
 
 require_relative "../config/environment"
 
-ObjectRelationship::CLI.new.run
+ObjRelationshipLecture::CLI.new.run

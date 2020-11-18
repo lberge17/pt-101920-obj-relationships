@@ -1,4 +1,4 @@
-module SeedProductData
+module ObjRelationshipLecture::SeedProductData
     PRODUCTS = [
         {
             name: "MacBook Pro", 
